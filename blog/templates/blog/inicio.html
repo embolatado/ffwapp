@@ -1,9 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Inicio</title>
-</head>
-<body>
-    <h1>Blog Inicio!</h1>
-</body>
-</html>
+{% extends 'blog/base.html' %}
+
+{% block contenido %}
+
+    {% for i in publicaciones %}
+        <h2>{{ i.titulo }}</h2>
+        <p><i>Por: {{ i.autor }}, {{ i.fecha_publicado }}</i></p>
+        <p>{{ i.contenido}}</p>
+    {% endfor %}
+
+{% endblock contenido %}
