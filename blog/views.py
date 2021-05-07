@@ -5,3 +5,7 @@ from django.http import HttpResponse
 
 def inicio(request):
     return HttpResponse("<h2>¡Hola, Mundo!</h2>")
+
+
+def acerca(request):
+    return HttpResponse("<h3>Acerca de nosotros</h3>")
