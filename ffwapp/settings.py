@@ -138,3 +138,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # CRISPY FORMS PACK
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# REDIRECCIÓN DE URL DESPUÉS DE LOGIN
+LOGIN_REDIRECT_URL = 'blog-inicio'
