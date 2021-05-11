@@ -14,10 +14,14 @@ def registro(request):
             usrnme = formulario.cleaned_data.get('username')
             # FLASH MESSAGES CON f' NOTATION
             messages.success(request, f'¡Cuenta, {usrnme} creada con éxito!')
-            
-            return redirect('blog-inicio')
+            # REDIRECCIONA AL USUARIO RECIÉN REGISTRADO
+            return redirect('usuarios-prf')
     else:
         formulario = UsuarioRegistroForm() # RETORNA EL FORMULARIO VACÍO
     
     # CUANDO EL NO HA SIDO DETECTADO UN METHOD
     return render(request, "usuarios/registro.html", {'form_reg': formulario})
+
+
+def perfil(request):
+    return render(request, 'usuarios/perfiles.html') 
